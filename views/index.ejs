@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>IP Viewer</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="/javascripts/index.js"></script>
+</style>
+</head>
+<body>
+
+<div class="filelist">
+<% fileList.forEach(function(file){ %>
+    <li>
+      <a href="<%=file.link%>" class="fileLink"><%=file.name%></a>
+    </li>
+<% }) %>
+</div>
+
+</body>
+</html>
