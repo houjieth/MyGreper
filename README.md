@@ -1,5 +1,4 @@
-MyXXXXXXXXX
-============
+MyGreper
+========
 
-Yet another web XXXXXXXXXXXXXXXXXXXXX based javascript and Node.js.
-
+Yet another web-based grep front-end based on Node.js and Ajax.
