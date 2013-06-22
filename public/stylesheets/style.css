@@ -20,9 +20,6 @@
 }
 
 #submitButton {
-  position: absolute;
-  left: 170px;
-  top: 8px;
   width: 150px;
   font-weight: bold;
   font-size: 15px;

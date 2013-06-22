@@ -1,16 +1,21 @@
 $(document).ready(function() {
-  $('#submitButton').click(function() {
-    $.ajax({
-      type: 'POST',
-      url: '/grep/',
-      data: $('.searchBox').serialize(),
-      success: function(data) {
-        renderResult(data);
-      }
-    });
-    return false;
-  });
+  $('#submitButton').click(startGrep);
+  $('#queryBox').bind('keydown', 'return', startGrep);
+  $('#contextButton').bind('keydown', 'return', startGrep);
+  return false;
 });
+
+function startGrep() {
+  $.ajax({
+    type: 'POST',
+    url: '/grep/',
+    data: $('.searchBox').serialize(),
+    success: function(data) {
+      renderResult(data);
+    }
+  });
+  return false; 
+}
 
 function renderResult(data) {
   var results = data.results;
@@ -29,4 +34,3 @@ function renderResult(data) {
     window.open($(this).attr("url"));
   });
 }
-    
