@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('#submitButton').click(startGrep);
   $('#queryBox').bind('keydown', 'return', startGrep);
+  $('#queryBox').focus();
   $('#contextButton').bind('keydown', 'return', startGrep);
   return false;
 });
